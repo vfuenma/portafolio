@@ -1,0 +1,475 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+:root{
+    --marron: #935116;
+    --verde-oliva: #1D8348;
+    --negrito: #1C2833;
+    --mostaza: #D68910;  
+}
+
+
+html{
+    font-size: 16px;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    
+.fondo-header{
+    background-image: url(/Users/valeria/Desktop/Acamica/Portafolio/imagenes/2986447.jpg);
+    background-size: cover;
+    height: 30rem;
+
+}
+
+    .icono-val{
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+    
+    .icono-val1{
+        display: none;
+    }
+    
+    .contenedor{
+        display: grid;
+        grid-gap: 30px;
+        height: auto;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:  
+                    "about about about"
+                    "skills skills skills"
+                    "projects projects projects"
+                    ". contact ."
+                    "footer footer footer";
+                }
+      
+    
+    .section1{
+        grid-area: about;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "titulo . texto";    
+    }
+    
+    .titulo-about{
+        grid-area: titulo;
+    }
+    
+    .rectangulo1{
+        height: 10.5rem;
+        width: 35rem;
+        background-color: var(--marron); 
+    }
+    
+    .rectangulo2{
+        height: 6.5rem;
+        width: 100%;
+        background-color: var(--marron); 
+    }
+    
+    
+    
+    .titulo-principal{
+        font-size: 5rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin-left: 10rem;
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    -webkit-transform: translateY(-60px);
+    transform: translateY(-60px);
+        
+    }
+    
+    .textos-about{
+        grid-area: texto;
+        padding-top: 40px;
+        color: var(--negrito);
+        padding-right: 20px;
+    
+    }
+    
+    .parrafo-about{
+        font-size: 3rem;
+        text-align: center;
+        color: var(--verde-oliva);
+        font-weight: bold;
+    }
+    
+    .parrafo-about-2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    
+    .section2{
+        margin-top: 80px;
+        grid-area: projects;
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        grid-auto-rows: 300px;
+        grid-template-areas: "parrafo-projects . project1"
+                             "project2 . project3";
+    }
+    
+    .parrafo-projects{
+        grid-area: parrafo-projects;
+    }
+    
+    .project1{
+        grid-area: project1;
+        border: 2px solid black;
+        margin: 5px;
+    }
+    
+    .project2{
+        grid-area: project2;
+        border: 2px solid black;
+        margin: 5px;
+    }
+    
+    .project3{
+        grid-area: project3;
+        border: 2px solid black;
+        margin: 5px;
+    }
+    
+    
+    
+    .section3{
+        margin-top: 50px;
+        grid-area: skills;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: ". . titulo-skills"
+                            "parrafo-skills parrafo-skills .";
+    }
+    
+    .parrafos-skills{
+        grid-area: parrafo-skills;
+        align-items: center; 
+    }
+    
+    .skill{
+        text-align: center;
+        padding-left: 50px;
+    }
+    
+    .titulo-skills{
+        grid-area: titulo-skills;
+    }
+    
+    .item1{
+        text-align: center;
+        color: var(--verde-oliva);
+        font-size: 2rem;
+        margin: 5px;
+    }
+    
+    .item2{
+    text-align: center;
+    color: var(--mostaza);
+    font-size: 2.5rem;
+    margin: 5px;
+    }
+    
+    .item3{
+    text-align: center;
+    color: var(--negrito);
+    font-size: 3.5rem;
+    margin: 5px;
+    }
+    
+    
+    
+    .section4{
+        margin-top: 80px;
+        grid-area: contact;
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-areas: "titulo-contact titulo-contact titulo-contact"
+                             " . info-contacto . "
+                             "container container container"
+      
+    }
+    
+    .titulo-contact{
+        grid-area: titulo-contact;
+    }
+    
+    .info-contacto{
+        grid-area: info-contacto;
+        text-align: center;
+    }
+    
+    .container{
+        grid-area: container;
+    }
+    
+    
+    .footer{
+        grid-area: footer;
+        text-align: center;
+    
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color:black;
+        font-size: 15px;
+        margin-right: 20px;
+        margin-top: 20px;
+        text-align: right;
+        font-weight: bold;
+      }
+      
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: white;
+      }
+      
+      .items-menu {
+          display: flex;
+          justify-content: flex-end;
+      }
+    
+    
+      .menu-toggle{
+          display: none;
+      }
+    
+      .menu-line {
+        display: none;
+      }
+      
+      .menu a:hover{
+        color: var(--verde-oliva);
+      }
+      
+    
+    input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 15px;
+        padding: 15px;
+        font-size: 16px;
+      }
+    
+    .custom-form{
+    
+        padding: 40px;
+    }
+    
+    textarea{
+        padding: 15px;
+        font-size: 16px;
+    
+    }
+    
+    
+    .btn {
+        width: 100%;
+        height: 40px;
+        text-transform: uppercase;
+        background-color: var(--verde-oliva);
+        border: 0;
+        color: white;
+        font-size: 1rem;
+        box-shadow: -5px 6px 17px -6px rgba(0,0,0,0.75)
+      }
+
+
+
+
+
+
+
+@media screen and ( max-width: 600px){
+
+.fondo-header{
+    display: none;
+}
+
+.contenedor{
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    "about about ."
+    "skills skills skills"
+   "projects projects ."
+   ". contact ."
+   "footer footer footer";
+  }
+
+  .section1{
+  grid-template-areas: "titulo titulo ."
+                       "texto texto texto";  
+
+}
+  .section2{
+
+
+      grid-template-columns: 1fr 80px 1fr;
+      grid-auto-rows: 300px;
+      grid-template-areas: "parrafo-projects parrafo-projects parrafo-projects"
+                           "project1 project1 project1"
+                           "project2 project2 project2 "
+                           " project3 project3 project3";
+  }
+
+  .section3{
+      grid-template-columns: 20px 1fr 20px;
+     grid-template-areas: ". titulo-skills titulo-skills"
+                  ". parrafo-skills ."
+  }
+
+.parrafo-skills{
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-skills{
+    justify-self: flex-end;
+}
+
+
+  .section4{
+
+      grid-template-columns: 1fr;
+      grid-template-areas: "titulo-contact titulo-contact titulo-contact"
+                           " info-contacto info-contacto info-contacto"
+                           "container container container"
+
+  }
+
+
+  .rectangulo1{
+      width: 28rem;
+      height: 4rem;
+  }
+
+  .titulo-principal{
+      font-size: 2rem;
+  }
+
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.items-menu{
+    flex-direction: column;
+    display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--verde-oliva);
+  padding: 0.66rem 1.33rem;
+  margin-bottom: 0.83rem;
+  text-decoration: none;
+}
+
+.letra-menu {
+  font-size: 1.33rem;
+  color: var(--negrito);
+  letter-spacing: 0;
+  line-height: 2.33rem;
+}
+
+.icono-val{
+  display: none;
+}
+ 
+.icono-val1{
+    height: 3rem;
+    width: 3rem;
+    display: initial;
+}
+
+.menu-toggle{
+  display: none;
+}
+
+.menu-line{
+    display: flex;
+}
+
+.menu-toggle-button{
+  width: 1.5rem;
+  height: 1rem;
+  display: initial;
+}
+
+#toggle:checked + .header + .menu{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+#toggle:checked + .items-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+#toggle:checked + .header .header-title-section .menu-toggle-button .menu-line-1{
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  margin:0;
+}
+  #toggle:checked + .header .header-title-section .menu-toggle-button .menu-line-2 {
+    opacity: 0;
+}
+
+#toggle:checked + .header .header-title-section .menu-toggle-button .menu-line-3{
+  -webkit-transform: rotate(45deg) translate(-1px, -2px);
+  transform: rotate(45deg) translate(-1px, 2px);
+  margin:0;
+}
+
+.menu a:hover {
+  background-color: var(--mostaza);
+  color: var(--negrito);
+  transition: 0.3s;
+}
+
+.menu-toggle-button > .menu-line {
+  width: 1.5rem;
+  height: 0.166rem;
+  background-color: var(--negrito);
+  margin: 0.25rem 0;
+  transition: 0.4s;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+ 
+
+
+
+    
+  
+  
+ 
